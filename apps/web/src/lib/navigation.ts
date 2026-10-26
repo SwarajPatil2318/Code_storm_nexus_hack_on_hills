@@ -1,0 +1,97 @@
+import {
+  Activity,
+  ScanLine,
+  Crosshair,
+  ShieldCheck,
+  Network,
+  Fingerprint,
+  ChartNoAxesCombined,
+  Settings2,
+  Users,
+} from "lucide-react";
+export const navigation = [
+  {
+    href: "/",
+    label: "Mission Control",
+    icon: Activity,
+    description: "Your evaluation operations overview",
+  },
+  {
+    href: "/evaluations",
+    label: "Evaluations",
+    icon: Activity,
+    description: "Approval handoffs, actual results and corresponding evidence",
+  },
+  {
+    href: "/attack-lab",
+    label: "Attack Lab",
+    icon: Crosshair,
+    description: "Adversarial scenarios and attack execution",
+  },
+  {
+    href: "/defence-vault",
+    label: "Defence Vault",
+    icon: ShieldCheck,
+    description: "Defence policies and sealed artifacts",
+  },
+  {
+    href: "/x-ray",
+    label: "NEXUS X-Ray",
+    icon: ScanLine,
+    description: "Live execution, recorded replay and forensic trace inspection",
+  },
+  {
+    href: "/isolation-observatory",
+    label: "Isolation Observatory",
+    icon: Network,
+    description: "Trust boundaries and communication paths",
+  },
+  {
+    href: "/proof-vault",
+    label: "Proof Vault",
+    icon: ShieldCheck,
+    description: "Signed receipts and independent evidence verification",
+  },
+  {
+    href: "/assurance-center",
+    label: "Assurance Center",
+    icon: ShieldCheck,
+    description: "Original security experiments and supporting evidence",
+  },
+  {
+    href: "/evidence-inspector",
+    label: "Evidence Inspector",
+    icon: Fingerprint,
+    description: "Evaluation evidence and verification",
+  },
+  {
+    href: "/llm-assurance",
+    label: "LLM Assurance",
+    icon: ShieldCheck,
+    description: "Model execution and context-leakage investigations",
+  },
+  {
+    href: "/resource-assurance",
+    label: "Resource Assurance",
+    icon: ChartNoAxesCombined,
+    description: "Workload budgets, measurements and interference studies",
+  },
+  {
+    href: "/analytics",
+    label: "Analytics",
+    icon: ChartNoAxesCombined,
+    description: "Evaluation trends and comparisons",
+  },
+  {
+    href: "/users",
+    label: "Operator Management",
+    icon: Users,
+    description: "Admin user and role management",
+  },
+  {
+    href: "/settings",
+    label: "Settings",
+    icon: Settings2,
+    description: "Environment and service diagnostics",
+  },
+];

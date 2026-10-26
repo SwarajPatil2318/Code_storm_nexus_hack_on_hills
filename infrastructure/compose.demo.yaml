@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:17-alpine@sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193
+    environment:
+      POSTGRES_USER: nexus_demo_bootstrap
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Demo bootstrap required}
+      POSTGRES_DB: nexus_proof_demo
+    ports:
+      - "127.0.0.1:55438:5432"
+    volumes:
+      - demo_data:/var/lib/postgresql/data
+    labels:
+      io.nexus.owner: ${DEMO_OWNER:?Demo owner required}
+      io.nexus.kind: demo-postgres
+    mem_limit: 384m
+    memswap_limit: 384m
+    cpus: 1
+    pids_limit: 128
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nexus_demo_bootstrap -d nexus_proof_demo"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  demo_data:
+    labels:
+      io.nexus.owner: ${DEMO_OWNER:?Demo owner required}
+      io.nexus.kind: demo-data
+networks:
+  default:
+    labels:
+      io.nexus.owner: ${DEMO_OWNER:?Demo owner required}
+      io.nexus.kind: demo-services

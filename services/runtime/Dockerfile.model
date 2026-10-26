@@ -1,0 +1,12 @@
+FROM python@sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de
+# libstdc++6 and gcc-14-base 14.2.0-19 already belong to the pinned base.
+# Exact Debian artifact; a changed/missing mirror object fails closed.
+ADD --checksum=sha256:72b7a1a33c48f3195efeb044111b34ae684b1e640bb6495c832443b798601cd5 https://deb.debian.org/debian/pool/main/g/gcc-14/libgomp1_14.2.0-19_amd64.deb /tmp/libgomp1.deb
+RUN dpkg -i /tmp/libgomp1.deb && rm /tmp/libgomp1.deb
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 NEXUS_WORKLOAD_ROLE=model LD_LIBRARY_PATH=/opt/inference
+WORKDIR /opt/runtime
+COPY inference-bin /opt/inference
+COPY wire.py worker.py gateway.py bootstrap.py providers.py evaluation_rules.py ./
+RUN ["/usr/local/bin/python", "-I", "-c", "import pathlib,shutil; [shutil.rmtree(p,ignore_errors=True) if pathlib.Path(p).is_dir() and not pathlib.Path(p).is_symlink() else pathlib.Path(p).unlink(missing_ok=True) for p in ['/bin','/sbin','/usr/bin','/usr/sbin']]; [p.unlink() for p in pathlib.Path('/usr/local/bin').iterdir() if p.name not in {'python','python3','python3.12'} and (p.is_file() or p.is_symlink())]"]
+USER 10001:10001
+ENTRYPOINT ["python", "-I", "/opt/runtime/bootstrap.py"]

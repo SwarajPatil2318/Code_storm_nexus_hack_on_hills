@@ -1,0 +1,14 @@
+node_modules
+.next
+.next-demo
+.next-resource
+.next-timing
+.next-center
+.next-ui
+.next-assurance
+.venv
+package-lock.json
+apps/web/src/lib/api.generated.ts
+packages/contracts/openapi.json
+playwright-report
+test-results

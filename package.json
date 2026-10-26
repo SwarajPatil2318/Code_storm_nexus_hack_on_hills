@@ -1,0 +1,25 @@
+{
+  "name": "nexus-platform",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspace @nexus/web",
+    "start": "npm run start --workspace @nexus/web",
+    "lint": "npm run lint --workspace @nexus/web",
+    "typecheck": "npm run typecheck --workspace @nexus/web",
+    "contracts:generate": ".venv/bin/python scripts/export_openapi.py && openapi-typescript packages/contracts/openapi.json -o apps/web/src/lib/api.generated.ts",
+    "contracts:check": ".venv/bin/python scripts/export_openapi.py --check && node scripts/check-contracts.mjs",
+    "nexus:setup": ".venv/bin/python scripts/nexus.py setup",
+    "nexus:start": ".venv/bin/python scripts/nexus.py start",
+    "nexus:stop": ".venv/bin/python scripts/nexus.py stop"
+  },
+  "devDependencies": {
+    "openapi-typescript": "7.13.0",
+    "prettier": "3.9.10"
+  }
+}

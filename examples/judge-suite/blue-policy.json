@@ -1,0 +1,14 @@
+{
+  "schema_version": "blue-policy-v1",
+  "input_terms": [
+    "priority override",
+    "ignore previous instructions"
+  ],
+  "input_action": "TRANSFORM",
+  "output_terms": [
+    "NEXUS_SYNTH_"
+  ],
+  "output_action": "BLOCK",
+  "require_json": false,
+  "strip_role_tokens": true
+}

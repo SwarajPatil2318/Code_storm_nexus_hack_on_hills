@@ -1,0 +1,21 @@
+{
+  "name": "Final judge suite: authority, disclosure and administrator-login control",
+  "provider": "local",
+  "execution_mode": "isolated_docker",
+  "security_profile": "STANDARD",
+  "generation": {
+    "temperature": 0,
+    "seed": 42,
+    "max_output_tokens": 128,
+    "context_window": 2048
+  },
+  "budget": {
+    "max_cases": 4,
+    "max_messages": 32,
+    "max_bytes": 8192,
+    "timeout_seconds": 300,
+    "model_timeout_ms": 30000,
+    "case_timeout_ms": 45000,
+    "concurrency": 1
+  }
+}
