@@ -23,7 +23,7 @@ Built for **Hack in Hills — Bayora Problem 04**.
 | ------------------ | ---------------------------------------------------------------------------------------------------------- |
 | Presentation / PPT | [View presentation](https://drive.google.com/file/d/13UkjmlTZYr5dDIQovPiHBxLnqTPm3015/view?usp=sharing)    |
 | Product demo video | [Watch demo on YouTube](https://www.youtube.com/watch?v=vGMHby2VtW0)                                       |
-| Elevator pitch     | [Watch elevator pitch](https://drive.google.com/file/d/1a0Y9hhzh75JLP67ytSx7NjYWATtSzEuP/view?usp=sharing) |
+| Elevator pitch     | [Watch elevator pitch](https://drive.google.com/file/d/1pXkxndGKELUqfjOic-e6eMRSRlwjWFbs/view?usp=sharing) |
 
 ## Start the project
 
