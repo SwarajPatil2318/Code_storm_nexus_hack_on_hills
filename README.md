@@ -19,11 +19,11 @@ Built for **Hack in Hills — Bayora Problem 04**.
 
 ## Presentation and videos
 
-| Material           | Link placeholder          |
-| ------------------ | ------------------------- |
-| Presentation / PPT | `ADD_PPT_LINK`            |
-| Product demo video | `ADD_DEMO_VIDEO_LINK`     |
-| Elevator pitch     | `ADD_ELEVATOR_PITCH_LINK` |
+| Material           | Link                                                                                                       |
+| ------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Presentation / PPT | [View presentation](https://drive.google.com/file/d/13UkjmlTZYr5dDIQovPiHBxLnqTPm3015/view?usp=sharing)    |
+| Product demo video | [Watch demo on YouTube](https://www.youtube.com/watch?v=vGMHby2VtW0)                                       |
+| Elevator pitch     | [Watch elevator pitch](https://drive.google.com/file/d/1a0Y9hhzh75JLP67ytSx7NjYWATtSzEuP/view?usp=sharing) |
 
 ## Start the project
 
@@ -242,8 +242,6 @@ This removes shared CPU-cache and memory-bandwidth contention between those host
 Separate VMs on the same physical server do not provide that physical separation.
 Cloud dedicated-host offerings provide explicit physical-server allocation.
 See [AWS Dedicated Hosts documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html).
-
-
 
 ### Mitigations When Using One Machine
 
